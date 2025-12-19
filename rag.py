@@ -2,7 +2,7 @@ from uuid import uuid4
 
 from dotenv import load_dotenv
 from pathlib import Path
-from langchain.chains import RetrievalQAWithSourcesChain
+from langchain.chains.retrieval_qa_with_sources import RetrievalQAWithSourcesChains
 from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
