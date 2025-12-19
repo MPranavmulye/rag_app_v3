@@ -11,6 +11,13 @@ from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from huggingface_hub import login
 import os
 
+import sys
+try:
+    import sqlite3
+    sys.modules["sqlite3"]=sys.modules.pop("pysqlite3")
+except ImportError:
+    pass
+
 load_dotenv()
 
 CHUNK_SIZE=1000
